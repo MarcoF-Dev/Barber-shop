@@ -13,7 +13,6 @@ Realizzato con HTML, CSS e JavaScript, include:
 - Sezione "Servizi" dettagliata con pulsanti di prenotazione  
 - Modulo di contatto per prenotazioni  
 - Modalità scura (dark mode)  
-- Design responsive per dispositivi mobili, tablet e desktop  
 
 ---
 
