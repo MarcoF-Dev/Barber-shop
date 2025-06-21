@@ -6,14 +6,14 @@ Sito web realizzato come esercizio didattico per un barbershop.
 
 ## Descrizione
 
-Questo progetto è una landing page responsive che presenta i servizi offerti da un salone di barbiere.  
+Questo progetto è una landing page che presenta i servizi offerti da un salone di barbiere.  
 Realizzato con HTML, CSS e JavaScript, include:
 
 - Sezione "Tagli" con immagini di tagli moderni e classici  
 - Sezione "Servizi" dettagliata con pulsanti di prenotazione  
 - Modulo di contatto per prenotazioni  
 - Modalità scura (dark mode)  
-- Design responsive per dispositivi mobili, tablet e desktop  
+
 
 ---
 
@@ -40,9 +40,7 @@ Autore
 Marco Favara
 
 Note
-Questo progetto è stato realizzato come esercizio personale per migliorare le competenze di sviluppo web front-end.
+Questo progetto è stato realizzato come esercizio personale per migliorare le competenze di sviluppo web front-end anche attraverso l'aiuto di agenti IA (chatGPT - Copilot).
 
-yaml
-Copia
-Modifica
+
 
