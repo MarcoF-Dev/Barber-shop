@@ -748,3 +748,123 @@ body.dark-mode .footer-section h4 {
 .dark-mode #commentoUtente button#sendComment:hover {
   background-color: #f5c17b;
 }
+
+/* Tablet (fino a 900px) */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  #logo {
+    height: 70px;
+  }
+  nav#headBar {
+    gap: 1.5rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main {
+    max-width: 90%;
+  }
+  #heroSection {
+    height: 350px;
+    font-size: 1.8rem;
+  }
+  #heroSection h2 {
+    font-size: 2.8rem;
+  }
+  #imgViewport {
+    width: calc(3 * 200px + 2 * 1rem); /* mostra 3 card invece di 6 */
+    margin: 0 auto;
+  }
+  #scrollWrapper {
+    width: calc(6 * 200px + 5 * 1rem);
+    animation-duration: 60s; /* più lento per meno elementi visibili */
+  }
+  #cardContainer {
+    gap: 2rem 3rem;
+    justify-content: center;
+  }
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
+  #commentContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #appointmentSection {
+    width: 90%;
+  }
+  #appointmentSection #appointmentLogo {
+    position: static;
+    height: 300px;
+    margin: 0 auto 1rem auto;
+  }
+  #inputContainer {
+    max-width: 100%;
+  }
+}
+
+/* Mobile (fino a 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem 1rem;
+  }
+  #logo {
+    height: 50px;
+  }
+  nav#headBar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #heroSection {
+    height: 250px;
+    font-size: 1.2rem;
+  }
+  #heroSection h2 {
+    font-size: 1.6rem;
+  }
+  #imgViewport {
+    width: calc(2 * 150px + 1 * 0.8rem); /* mostra 2 card */
+    border-width: 1.5px;
+  }
+  #scrollWrapper {
+    width: calc(4 * 150px + 3 * 0.8rem);
+    animation-duration: 90s;
+  }
+  .cut {
+    height: 150px;
+    width: 150px;
+    font-size: 1.5rem;
+  }
+  #cardContainer {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  #commentContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #appointmentSection {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  #appointmentSection #appointmentLogo {
+    height: 200px;
+  }
+  #inputContainer {
+    max-width: 100%;
+  }
+  #radioContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
