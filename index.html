@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prenota il tuo taglio nel miglior barber shop di Palermo. Offriamo taglio, barba, trattamenti e consulenze."
+    />
+    <meta name="author" content="Barber Shop Palermo" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="img/Logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <title>Barber Shop - Site</title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="img/Logo.png" />
+      <nav id="headBar">
+        <a href="#scrollCut"> Tagli <i class="ri-scissors-fill"></i></a
+        ><a href="#scrollService">Servizi <i class="ri-task-line"></i></a
+        ><a href="#siteFooter">Info <i class="ri-information-2-line"></i></a>
+        <button id="darkToggle"><i class="ri-moon-fill"></i> Dark Mode</button>
+        <button id="contact">Contattaci</button>
+      </nav>
+    </header>
+    <main class="active">
+      <section id="heroSection">
+        <h2>Benvenuto al nostro barber shop</h2>
+        <button id="prenota">Prenota appuntamento</button>
+      </section>
+
+      <section id="cut">
+        <h2 id="scrollCut">I nostri tagli:</h2>
+        <!--id per far scrollare al tocco della nav -->
+        <h3>
+          Esplora la nostra selezione di tagli moderni e classici, pensati per
+          valorizzare ogni stile e personalità. I nostri clienti li adorano —
+          scopri anche tu il tuo prossimo look.
+        </h3>
+        <div id="imgViewport">
+          <div id="scrollWrapper">
+            <div class="cut first"></div>
+            <div class="cut second"></div>
+            <div class="cut third"></div>
+            <div class="cut fourth"></div>
+            <div class="cut fifth"></div>
+            <div class="cut sixth"></div>
+
+            <div class="cut first"></div>
+            <div class="cut second"></div>
+            <div class="cut third"></div>
+            <div class="cut fourth"></div>
+            <div class="cut fifth"></div>
+            <div class="cut sixth"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service">
+        <h2 id="scrollService">I nostri servizi:</h2>
+        <h3>
+          Offriamo taglio, rasatura, modellatura barba, trattamenti per capelli
+          e consulenze personalizzate. Scopri tutti i nostri servizi pensati per
+          valorizzare il tuo stile.
+        </h3>
+
+        <div id="cardContainer">
+          <div class="card">
+            <div class="cardTitle">
+              <h4>Taglio capelli</h4>
+              <i class="ri-scissors-2-fill"></i>
+            </div>
+            <p>
+              Taglio personalizzato per ogni stile, eseguito dai nostri esperti
+              barbieri.
+            </p>
+            <span class="prezzo">da €20</span>
+            <button class="cardButton">Prenota servizio</button>
+            <p class="durataServizio">⏱️ 30 minuti</p>
+          </div>
+          <div class="card">
+            <div class="cardTitle">
+              <h4>Rasatura barba</h4>
+              <i class="ri-emotion-fill"></i>
+            </div>
+            <p>
+              Rasatura tradizionale con panno caldo per una pelle liscia e
+              curata.
+            </p>
+            <span class="prezzo">da €15</span>
+            <button class="cardButton">Prenota servizio</button>
+            <p class="durataServizio">⏱️ 30 minuti</p>
+          </div>
+          <div class="card">
+            <div class="cardTitle">
+              <h4>Modellatura barba</h4>
+              <i class="ri-shape-fill"></i>
+            </div>
+            <p>
+              Definizione e modellatura della barba per valorizzare il tuo viso.
+            </p>
+            <span class="prezzo">da €18</span>
+            <button class="cardButton">Prenota servizio</button>
+            <p class="durataServizio">⏱️ 10 minuti</p>
+          </div>
+          <div class="card">
+            <div class="cardTitle">
+              <h4>Trattamenti capelli</h4>
+              <i class="ri-drop-fill"></i>
+            </div>
+            <p>Trattamenti nutrienti e rinforzanti per capelli sani e forti.</p>
+            <span class="prezzo">da €12</span>
+            <button class="cardButton">Prenota servizio</button>
+            <p class="durataServizio">⏱️ 35 minuti</p>
+          </div>
+          <div class="card">
+            <div class="cardTitle">
+              <h4>Consulenza personalizzata</h4>
+              <i class="ri-user-3-fill"></i>
+            </div>
+            <p>
+              Consigli su misura per il tuo look e la cura di barba e capelli.
+            </p>
+            <span class="prezzo">da €10</span>
+            <button class="cardButton">Prenota servizio</button>
+            <p class="durataServizio">⏱️ 60 minuti</p>
+          </div>
+          <div class="card">
+            <div class="cardTitle">
+              <h4>Servizi speciali eventi</h4>
+              <i class="ri-star-smile-fill"></i>
+            </div>
+            <p>
+              Preparazione e styling per matrimoni, cerimonie e occasioni
+              speciali.
+            </p>
+            <span class="prezzo">da €25</span>
+            <button class="cardButton">Prenota servizio</button>
+            <p class="durataServizio">⏱️ 120 minuti</p>
+          </div>
+        </div>
+      </section>
+      <section id="commentSection">
+        <h2>Alcuni commenti:</h2>
+        <h3 class="commentIntro">
+          I nostri clienti sono la nostra migliore pubblicità: ecco alcune delle
+          loro opinioni e recensioni dopo aver provato i nostri servizi. La
+          soddisfazione di chi ci sceglie ogni giorno è per noi motivo di
+          orgoglio e uno stimolo a migliorare sempre di più.
+        </h3>
+        <div id="commentContainer">
+          <div class="commentBox">
+            <div class="utente">
+              <img
+                src="https://ui-avatars.com/api/?name=Giorgia+L&background=00695C&color=fff&rounded=true"
+                alt="Giorgia L"
+                class="avatar"
+              />
+              <p>Giorgia L.</p>
+            </div>
+            <i class="ri-chat-3-fill comment"></i>
+            <p>
+              “Servizio impeccabile e staff gentilissimo. Tornerò sicuramente!”
+            </p>
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span>(5.0/5.0)</span>
+            </div>
+          </div>
+          <div class="commentBox">
+            <div class="utente">
+              <img
+                src="https://ui-avatars.com/api/?name=Fabio+R&background=BF360C&color=fff&rounded=true"
+                alt="Fabio R"
+                class="avatar"
+              />
+              <p>Fabio R.</p>
+            </div>
+            <i class="ri-chat-3-fill comment"></i>
+            <p>
+              “Taglio perfetto, ambiente accogliente e prodotti di qualità.”
+            </p>
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span>(5.0/5.0)</span>
+            </div>
+          </div>
+          <div class="commentBox">
+            <div class="utente">
+              <img
+                src="https://ui-avatars.com/api/?name=Luca+M&background=4A148C&color=fff&rounded=true"
+                alt="Luca M"
+                class="avatar"
+              />
+              <p>Luca M.</p>
+            </div>
+            <i class="ri-chat-3-fill comment"></i>
+            <p>
+              “Consigliatissimo per chi cerca professionalità e attenzione ai
+              dettagli.”
+            </p>
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span>(5.0/5.0)</span>
+            </div>
+          </div>
+          <div class="commentBox">
+            <div class="utente">
+              <img
+                src="https://ui-avatars.com/api/?name=Marco+F&background=4A148C&color=fff&rounded=true"
+                alt="Marco F."
+                class="avatar"
+              />
+              <p>Marco F.</p>
+            </div>
+            <i class="ri-chat-3-fill comment"></i>
+            <p>
+              “Personale gentile e preparato, atmosfera rilassante e prezzi
+              onesti.
+            </p>
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span>(5.0/5.0)</span>
+            </div>
+          </div>
+          <div class="commentBox">
+            <div class="utente">
+              <img
+                src="https://ui-avatars.com/api/?name=Giorgia+P&background=4A148C&color=fff&rounded=true"
+                alt="Giorgia P"
+                class="avatar"
+              />
+              <p>Giorgia P.</p>
+            </div>
+            <i class="ri-chat-3-fill comment"></i>
+            <p>
+              “Ottimo servizio e grande attenzione ai dettagli. Mio marito è
+              rimasto molto soddisfatto del taglio.
+            </p>
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span>(5.0/5.0)</span>
+            </div>
+          </div>
+          <div class="commentBox">
+            <div class="utente">
+              <img
+                src="https://ui-avatars.com/api/?name=Beatrice+F&background=BF360C&color=fff&rounded=true"
+                alt="Beatrice F"
+                class="avatar"
+              />
+              <p>Beatrice F.</p>
+            </div>
+            <i class="ri-chat-3-fill comment"></i>
+            <p>
+              “Esperienza fantastica! Ho trovato finalmente il mio barbiere di
+              fiducia.
+            </p>
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <span>(5.0/5.0)</span>
+            </div>
+          </div>
+        </div>
+        <div id="commentBtnContainer">
+          <button id="commentBtn">Aggiungi commento+</button>
+        </div>
+      </section>
+    </main>
+    <div id="commentoUtente">
+      <h4>Nome utente</h4>
+      <input type="text" id="name" placeholder="Nome Cognome" />
+      <h4>Colore profilo</h4>
+      <input type="color" id="colorInput" value="#00695C" />
+
+      <h4>Commento</h4>
+      <textarea name="" id="comment" spellcheck="false"></textarea>
+
+      <button id="sendComment">Invia</button>
+    </div>
+    <footer class="active" id="siteFooter">
+      <div class="footer-content">
+        <div class="footer-section" id="information">
+          <h4>Chi siamo:</h4>
+          <p>
+            Il nostro Barber Shop nasce dalla passione per l'eleganza maschile e
+            la cura dei dettagli. Dal 2005 offriamo servizi professionali di
+            taglio, rasatura e styling, unendo le tecniche tradizionali alle
+            tendenze più moderne. Ogni cliente è accolto in un ambiente
+            rilassante, dove il tempo si ferma e l’attenzione si concentra su di
+            te. Utilizziamo solo prodotti di alta qualità per garantire
+            risultati eccellenti e duraturi. Che tu voglia un look classico, un
+            taglio sfumato o un trattamento per la barba, il nostro staff
+            esperto saprà consigliarti e valorizzare il tuo stile personale.
+            Entra da noi, esci al meglio di te.
+          </p>
+        </div>
+        <div id="moreInfoContainer">
+          <div class="footer-section">
+            <h4>Contatti</h4>
+            <p>📍 Via Roma 123, Palermo</p>
+            <p>📞 333 456 7890</p>
+            <p>✉️ info@barbershop.it</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Orari</h4>
+            <p>Lun - Ven: 9:00 - 19:00</p>
+            <p>Sabato: 9:00 - 14:00</p>
+            <p>Domenica: Chiuso</p>
+          </div>
+          <div class="footer-section">
+            <img src="img/Logo.png" id="logoInfo" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Barber Shop. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+
+    <section id="appointmentSection">
+      <h2>Prenota il tuo appuntamento</h2>
+
+      <div id="inputContainer">
+        <h4>Nome</h4>
+        <input type="text" id="nomeAppuntamento" />
+        <h4>Cognome</h4>
+        <input type="text" id="cognomeAppuntamento" />
+
+        <h4>Seleziona giorno</h4>
+        <input type="date" id="day" />
+
+        <h4>Seleziona servizio</h4>
+
+        <div id="radioContainer">
+          <label class="radioCard">
+            <input
+              type="radio"
+              class="inputRadio"
+              name="servizio"
+              value="Taglio capelli"
+            />
+            <h5>Taglio capelli</h5>
+            <p class="radioDesc">Taglio personalizzato per ogni stile.</p>
+            <span class="radioPrezzo"> €20</span>
+          </label>
+          <label class="radioCard">
+            <input
+              type="radio"
+              class="inputRadio"
+              name="servizio"
+              value="Rasatura barba"
+            />
+            <h5>Rasatura barba</h5>
+            <p class="radioDesc">Rasatura tradizionale con panno caldo.</p>
+            <span class="radioPrezzo"> €15</span>
+          </label>
+          <label class="radioCard">
+            <input
+              type="radio"
+              class="inputRadio"
+              name="servizio"
+              value="Modellatura barba"
+            />
+            <h5>Modellatura barba</h5>
+            <p class="radioDesc">Definizione e modellatura della barba.</p>
+            <span class="radioPrezzo"> €18</span>
+          </label>
+          <label class="radioCard">
+            <input
+              type="radio"
+              class="inputRadio"
+              name="servizio"
+              value="Trattamenti capelli"
+            />
+            <h5>Trattamenti capelli</h5>
+            <p class="radioDesc">Trattamenti nutrienti e rinforzanti.</p>
+            <span class="radioPrezzo"> €12</span>
+          </label>
+          <label class="radioCard">
+            <input
+              type="radio"
+              class="inputRadio"
+              name="servizio"
+              value="Consulenza personalizzata"
+            />
+            <h5>Consulenza personalizzata</h5>
+            <p class="radioDesc">Consigli su misura per il tuo look.</p>
+            <span class="radioPrezzo"> €10</span>
+          </label>
+          <label class="radioCard">
+            <input
+              type="radio"
+              class="inputRadio"
+              name="servizio"
+              value="Servizi speciali eventi"
+            />
+            <h5>Servizi speciali eventi</h5>
+            <p class="radioDesc">Styling per matrimoni e cerimonie.</p>
+            <span class="radioPrezzo"> €25</span>
+          </label>
+        </div>
+        <button id="sendAppointment">Invia prenotazione</button>
+      </div>
+      <img src="img/Logo.png" id="appointmentLogo" alt="" />
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
