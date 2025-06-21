@@ -379,6 +379,18 @@ h3 {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0.5rem;
 }
+#commentoUtente span {
+  position: absolute;
+  top: 0.4rem;
+  right: 1rem;
+  font-weight: 700;
+  color: #a37438;
+}
+#commentoUtente span:hover {
+  color: #4a3b1e;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
 /* Footer */
 #siteFooter {
   background-color: #f2efe6;

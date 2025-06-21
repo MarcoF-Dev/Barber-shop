@@ -48,6 +48,11 @@ function addActive() {
 const commentBtn = document.getElementById("commentBtn");
 const commentoUtente = document.getElementById("commentoUtente");
 const sendCommentBtn = document.getElementById("sendComment");
+const closeComment = document.getElementById("closeComment");
+
+closeComment.addEventListener("click", () => {
+  slideComment();
+});
 commentBtn.addEventListener("click", () => {
   slideComment();
 });
