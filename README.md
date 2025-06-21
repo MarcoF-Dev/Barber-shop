@@ -1,4 +1,4 @@
-#Barber Shop Website
+# Barber Shop Website
 
 Sito web realizzato come esercizio didattico per un barbershop.
 
@@ -46,7 +46,3 @@ yaml
 Copia
 Modifica
 
----
-
-Se vuoi, te lo posso adattare o allungare con sezioni come “Come contribuire”, “Licenza” o altro.  
-Fammi sapere!
