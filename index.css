@@ -1,50 +1,45 @@
-/* =======================
-   Google Font
-======================= */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* =======================
-   Reset & base
-======================= */
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html { scroll-behavior: smooth; }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   background-color: #fefefe;
-  overflow-x: hidden;
+  overflow-x: hidden; /* evita overflow orizzontale */
 }
 
-/* =======================
-   Header
-======================= */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* permette di andare a capo se serve */
   padding: 1.2rem 2rem;
   background-color: #f2efe6;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   margin-bottom: 1rem;
-  flex-wrap: wrap;
+  overflow-x: hidden; /* evita overflow orizzontale */
 }
 
-button { font-family: "Montserrat", sans-serif; }
+button {
+  font-family: "Montserrat", sans-serif;
+}
 
-#logo { height: clamp(60px, 10vw, 100px); }
+#logo {
+  height: 100px;
+}
 
 nav#headBar {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
-  flex-wrap: wrap;
+  gap: 2.5rem;
+  font-size: 1.1rem;
 }
 
 nav#headBar a {
@@ -54,9 +49,10 @@ nav#headBar a {
   transition: color 0.3s ease;
 }
 
-nav#headBar a:hover { color: #b88c4b; }
+nav#headBar a:hover {
+  color: #b88c4b; /* colore caldo, simile all'oro/barber shop style */
+}
 
-/* Bottoni header generici */
 #contact,
 #darkToggle,
 #commentBtn,
@@ -79,22 +75,18 @@ nav#headBar a:hover { color: #b88c4b; }
   cursor: pointer;
 }
 
-/* =======================
-   Hero Section
-======================= */
+/* Hero section */
 main {
-  max-width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
-
 #heroSection {
-  position: relative;
+  position: relative; /* per posizionare overlay e testo */
   background-image: url("img/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: clamp(350px, 50vw, 500px);
+  height: 500px;
   width: 100%;
 
   display: flex;
@@ -105,22 +97,21 @@ main {
   padding: 0 1rem;
   color: white;
   font-weight: 700;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: 2.5rem;
   gap: 1rem;
 
   z-index: 1;
   margin-bottom: 2rem;
 }
-
 #heroSection h2 {
   margin-bottom: 1rem;
   font-weight: 700;
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: 4rem;
   color: #b88c4b;
 }
-
 #heroSection #prenota {
   padding: 1rem;
+
   background-color: #b88c4b;
   border-radius: 10px;
   color: #fff;
@@ -129,16 +120,14 @@ main {
   transition: all 0.3s ease-in-out;
   border: 1px solid transparent;
 }
-
 #heroSection #prenota:hover {
   background-color: #a37438;
   transform: scale(1.05);
   cursor: pointer;
 }
+/* Overlay scuro per migliorare leggibilità */
 
-/* =======================
-   Carousel “Cut” Section
-======================= */
+/* Sezione contenitore */
 #cut {
   max-width: 1280px;
   margin: 2rem auto 3rem auto;
@@ -151,16 +140,17 @@ h2 {
   font-size: 2rem;
   color: #a37438;
 }
-
 h3 {
   color: #b88c4b;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
+/* Viewport che mostra 6 div */
 #imgViewport {
-  width: 100%;
-  overflow-x: auto;
+  width: calc(6 * 200px + 5 * 1rem); /* viewport per 6 div + 5 gap */
+  overflow: hidden;
+  margin: 0 auto;
   border: 2px solid #a37438;
   border-radius: 8px;
 }
@@ -168,7 +158,7 @@ h3 {
 #scrollWrapper {
   display: flex;
   gap: 1rem;
-  width: max-content;               /* largo quanto serve */
+  width: calc(12 * 200px + 11 * 1rem); /* 12 div da 200px + 11 gap */
   animation: scrollLeft 30s linear infinite;
   transform: translate3d(0, 0, 0);
 }
@@ -185,46 +175,59 @@ h3 {
   font-weight: bold;
   user-select: none;
   flex-shrink: 0;
+
   background-position: center;
   background-size: cover;
 }
 
-/* Animazione di scorrimento */
 @keyframes scrollLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-1 * (6 * 200px + 5 * 1rem))); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* scrolla la larghezza di 6 div + 5 gap */
+    transform: translateX(calc(-1 * (6 * 200px + 5 * 1rem)));
+  }
 }
 
-/* Immagini taglio */
-.first  { background-image: url(img/taglio1.png); }
-.second { background-image: url(img/taglio2.png); }
-.third  { background-image: url(img/taglio3.png); }
-.fourth { background-image: url(img/taglio4.png); }
-.fifth  { background-image: url(img/taglio5.png); }
-.sixth  { background-image: url(img/taglio6.png); }
+.first {
+  background-image: url(img/taglio1.png);
+}
+.second {
+  background-image: url(img/taglio2.png);
+}
+.third {
+  background-image: url(img/taglio3.png);
+}
+.fourth {
+  background-image: url(img/taglio4.png);
+}
+.fifth {
+  background-image: url(img/taglio5.png);
+}
+.sixth {
+  background-image: url(img/taglio6.png);
+}
 
-/* =======================
-   Card “Service” Section
-======================= */
+/* Card service */
 #service {
   margin-bottom: 2rem;
   padding: 0 1rem;
 }
-
 #cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 3rem 10rem;
 }
-
 .card {
-  flex: 1 1 clamp(250px, 30%, 300px);
+  height: 250px;
+  width: 300px;
   border: 2px solid #a37438;
   border-radius: 20px;
   box-shadow: 0 6px 24px 0 rgba(163, 116, 56, 0.15);
   position: relative;
-  max-width: 100%;
 }
 
 .card .cardTitle {
@@ -234,9 +237,10 @@ h3 {
   margin-bottom: 0.5rem;
   padding-top: 0.5rem;
 }
-
-.card p { color: #b88c4b; text-align: center; }
-
+.card p {
+  color: #b88c4b;
+  text-align: center;
+}
 .card .cardButton {
   position: absolute;
   bottom: 1rem;
@@ -249,13 +253,11 @@ h3 {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
 .cardButton:hover {
   background-color: #a37438;
   transform: scale(1.05);
   cursor: pointer;
 }
-
 .card .prezzo {
   display: block;
   text-align: center;
@@ -264,50 +266,45 @@ h3 {
   font-weight: 700;
   margin: 1rem 0;
 }
-
 .card .durataServizio {
   position: absolute;
   bottom: 1.2rem;
   right: 1rem;
   border-bottom: 1px solid #b88c4b;
 }
-
-/* =======================
-   Comment Section
-======================= */
-#commentSection { padding: 0 1rem; }
-
+/* Comment section */
+#commentSection {
+  padding: 0 1rem;
+}
 #commentContainer {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-around;
+  gap: 4rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
-
 .commentBox {
   border: 2px solid #b88c4b;
   border-radius: 20px;
   position: relative;
-  width: clamp(250px, 40vw, 350px);
+  width: 350px;
   height: 150px;
 }
-
-.commentBox p { padding: 0.5rem 1rem 1rem 1rem; }
-
+.commentBox p {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
 .comment {
   position: absolute;
   top: 1rem;
   right: 1rem;
   color: #b48f4d;
 }
-
 .utente {
   display: flex;
-  align-items: center;
-  margin: 1rem;
-}
 
+  align-items: center;
+  margin: 1rem 1rem 0 1rem;
+}
 .avatar {
   width: 40px;
   height: 40px;
@@ -315,16 +312,18 @@ h3 {
   object-fit: cover;
   margin-right: 0.5rem;
 }
-
 .stars {
   display: flex;
   position: absolute;
   bottom: 0.5rem;
   right: 1rem;
 }
-
-.stars span { font-style: italic; }
-.stars i    { color: yellow; }
+.stars span {
+  font-style: italic;
+}
+.stars i {
+  color: yellow;
+}
 
 #commentBtnContainer {
   display: flex;
@@ -333,8 +332,7 @@ h3 {
 
 #commentoUtente {
   border: 1px solid black;
-  width: 90%;
-  max-width: 400px;
+  width: 300px;
   padding: 1rem;
   position: fixed;
   left: 50%;
@@ -346,68 +344,78 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-
-#sendComment { width: 100px; align-self: flex-end; }
-
-/* Slide-in animato */
+#sendComment {
+  width: 100px;
+  align-self: flex-end;
+}
 #commentoUtente.slide {
   animation: commentoSlide 0.6s cubic-bezier(0.4, 1.4, 0.6, 1) forwards;
 }
 
 @keyframes commentoSlide {
-  0%   { transform: translate(-50%, 100%); opacity: 0; }
-  100% { transform: translate(-50%, -50%); opacity: 1; }
+  0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }
-
-#commentoUtente h4 { color: #a37438; }
-
-#commentoUtente input,
-#commentoUtente textarea {
+#commentoUtente h4 {
+  color: #a37438;
+}
+#commentoUtente input {
   border-radius: 10px;
-  padding: 0.5rem;
+  padding: 0.3rem;
   color: #b48f4d;
   border: 2px solid #b48f4d;
+  font-family: 700;
+  font-family: "Montserrat", sans-serif;
+}
+#commentoUtente textarea {
+  resize: none;
+  border: 1px solid #a37438;
+  width: 100%;
+  padding: 0.5rem;
+  color: #b48f4d;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0.5rem;
 }
-
-#commentoUtente textarea { resize: none; width: 100%; }
-
 #commentoUtente span {
   position: absolute;
   top: 0.4rem;
   right: 1rem;
   font-weight: 700;
   color: #a37438;
-  cursor: pointer;
 }
-
 #commentoUtente span:hover {
   color: #4a3b1e;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
-
-/* =======================
-   Footer
-======================= */
+/* Footer */
 #siteFooter {
   background-color: #f2efe6;
-  padding: 2rem 1rem;
+  padding: 2rem;
   color: #222;
   font-family: "Montserrat", sans-serif;
   margin-top: 3rem;
   border-top: 2px solid #a37438;
 }
-
-#siteFooter #information { text-align: center; }
-
-#information h4 { font-size: 2rem; }
-
-#information p { font-size: 1rem; }
-
+#siteFooter #information {
+  text-align: center;
+}
+#information h4 {
+  font-size: 2rem;
+}
+#information p {
+  font-size: 1rem;
+}
 .footer-content {
   display: flex;
   flex-direction: column;
+
   gap: 2rem;
   max-width: 1280px;
   margin: 0 auto;
@@ -424,62 +432,57 @@ h3 {
   font-size: 0.95rem;
   text-align: center;
 }
-
 #moreInfoContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
 }
-
 #moreInfoContainer #logoInfo {
-  height: clamp(100px, 15vw, 150px);
+  height: 150px;
 }
-
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.85rem;
   color: #888;
 }
-
-/* =======================
-   Appointment Section
-======================= */
-/* Contenitore principale */
-#appointmentSection {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto 2rem auto;
-  position: relative;
-  padding: 0 1rem;
+/* display section */
+.active,
+#appointmentSection.active {
+  display: block;
 }
+main {
+  display: none;
+}
+footer {
+  display: none;
+}
+#appointmentSection {
+  display: none;
+}
+/* Appointment sect */
+#appointmentSection {
+  width: 1280px;
+  margin: 0 auto 2rem auto;
 
-/* Logo/immagine laterale */
+  position: relative;
+}
 #appointmentSection #appointmentLogo {
-  height: clamp(250px, 45vw, 600px);
+  height: 600px;
   position: absolute;
   right: 0;
   top: 0;
-  pointer-events: none;             /* evita click */
-  user-select: none;
 }
-
-/* Form inputs */
 #inputContainer {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
   max-width: 650px;
 }
-
 #appointmentSection h4,
 #appointmentSection input[type="text"],
 #appointmentSection input[type="date"] {
   margin-bottom: 0.5rem;
 }
-
 #appointmentSection input[type="text"],
 #appointmentSection input[type="date"] {
   border-radius: 10px;
@@ -489,21 +492,22 @@ h3 {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
+#appointmentSection h4 {
+  color: #a37438;
+}
 
-/* Titolo dei campi */
-#appointmentSection h4 { color: #a37438; }
-
-/* Radio + etichette prezzo */
 #radioContainer {
-  width: 100%;
+  width: 200px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+
   margin-bottom: 1rem;
 }
 
 .radioCard {
-  width: 100%;
+  width: 200px;
   border: 2px solid #a37438;
   border-radius: 20px;
   padding: 0.5rem 1rem 0.3rem 1rem;
@@ -517,31 +521,28 @@ h3 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
 }
-
-.radioCard input { display: none; }
-
+.radioCard input {
+  display: none;
+}
 .radioCard:has(input:checked) {
   background-color: #ffe6b8;
   border-color: #d18c33;
   box-shadow: 0 0 0 2px rgba(223, 157, 67, 0.3);
   transform: scale(1.02);
 }
-
-.radioCard h5 { color: #a37438; }
-
+.radioCard h5 {
+  color: #a37438;
+}
 .radioCard p {
   font-size: 0.8rem;
   color: black;
   font-weight: 500;
 }
-
 .radioCard .radioPrezzo {
   font-weight: 700;
   align-self: flex-end;
   color: #a37438;
 }
-
-/* Pulsante invio */
 #sendAppointment {
   padding: 0.5rem 1.2rem;
   background-color: #b88c4b;
@@ -552,16 +553,13 @@ h3 {
   transition: all 0.3s ease;
   align-self: flex-end;
 }
-
 #sendAppointment:hover {
   background-color: #a37438;
   transform: scale(1.05);
   cursor: pointer;
 }
+/* DARK MODE */
 
-/* =======================
-   Dark Mode
-======================= */
 body.dark-mode {
   background-color: #181818;
   color: #e0e0e0;
@@ -573,88 +571,101 @@ body.dark-mode header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-body.dark-mode nav#headBar a       { color: #ddd; }
-body.dark-mode nav#headBar a:hover { color: #d4ab68; }
+body.dark-mode nav#headBar a {
+  color: #ddd;
+}
+
+body.dark-mode nav#headBar a:hover {
+  color: #d4ab68;
+}
 
 /* Bottoni */
 body.dark-mode #contact,
-body.dark-mode #darkToggle,
-body.dark-mode #commentBtn,
-body.dark-mode #sendComment {
+body.dark-mode #darkToggle {
   background-color: #d4ab68;
   color: #1e1e1e;
 }
 
 body.dark-mode #contact:hover,
-body.dark-mode #darkToggle:hover,
-body.dark-mode #commentBtn:hover,
-body.dark-mode #sendComment:hover {
+body.dark-mode #darkToggle:hover {
   background-color: #b48f4d;
 }
 
-/* Hero */
-body.dark-mode #heroSection       { color: #fff; }
-body.dark-mode #heroSection h2    { color: #d4ab68; }
-body.dark-mode #heroSection #prenota          { background-color: #d4ab68; color: #1e1e1e; }
-body.dark-mode #heroSection #prenota:hover    { background-color: #b48f4d; }
+/* Hero section */
+body.dark-mode #heroSection {
+  color: #fff;
+}
 
-/* Carousel */
-body.dark-mode #imgViewport        { border-color: #a77f3d; }
-body.dark-mode .cut                { border-color: #a77f3d; background-color: #2a2a2a; color: #f0f0f0; }
+body.dark-mode #heroSection h2 {
+  color: #d4ab68;
+}
+
+body.dark-mode #heroSection #prenota {
+  background-color: #d4ab68;
+  color: #1e1e1e;
+}
+
+body.dark-mode #heroSection #prenota:hover {
+  background-color: #b48f4d;
+}
+
+/* Viewport */
+body.dark-mode #imgViewport {
+  border-color: #a77f3d;
+}
+
+body.dark-mode .cut {
+  border-color: #a77f3d;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
 
 /* Card */
-body.dark-mode .card               { border-color: #a77f3d; background-color: #222; box-shadow: 0 4px 16px rgba(167, 127, 61, 0.08); }
-body.dark-mode .card .cardTitle    { color: #d4ab68; }
-body.dark-mode .card p,
-body.dark-mode .card .prezzo       { color: #c59c59; }
-body.dark-mode .card .cardButton   { background-color: #c59c59; color: #1e1e1e; }
-body.dark-mode .cardButton:hover   { background-color: #a67e42; }
-body.dark-mode .card .durataServizio { border-bottom-color: #c59c59; }
+body.dark-mode .card {
+  border-color: #a77f3d;
+  background-color: #222;
+  box-shadow: 0 4px 16px rgba(167, 127, 61, 0.08);
+}
 
-/* Comment button */
-body.dark-mode #commentBtn         { background-color: #c59c59; color: #1e1e1e; }
-body.dark-mode #commentBtn:hover   { background-color: #a67e42; }
+body.dark-mode .card .cardTitle {
+  color: #d4ab68;
+}
+
+body.dark-mode .card p,
+body.dark-mode .card .prezzo {
+  color: #c59c59;
+}
+
+body.dark-mode .card .cardButton {
+  background-color: #c59c59;
+  color: #1e1e1e;
+}
+
+body.dark-mode .cardButton:hover {
+  background-color: #a67e42;
+}
+
+body.dark-mode .card .durataServizio {
+  border-bottom-color: #c59c59;
+}
+body.dark-mode #commentBtn {
+  background-color: #c59c59;
+  color: #1e1e1e;
+}
+body.dark-mode #commentBtn:hover {
+  background-color: #a67e42;
+}
 
 /* Footer */
-body.dark-mode #siteFooter         { background-color: #202020; color: #dcdcdc; border-top: 2px solid #a77f3d; }
-body.dark-mode .footer-section h4  { color: #d4ab68; }
-
-/* Appointment */
-.dark-mode #appointmentSection                     { background-color: #1e1e1e; color: #f1f1f1; }
-.dark-mode #appointmentSection h4                  { color: #f5c17b; }
-.dark-mode #appointmentSection input[type="text"],
-.dark-mode #appointmentSection input[type="date"]  { background-color: #2b2b2b; color: #fff; border: 2px solid #d6a861; }
-
-.dark-mode #radioContainer                         { color: white; }
-.dark-mode .radioCard                              { background-color: #2e2e2e; border-color: #d6a861; }
-.dark-mode .radioCard:hover                        { box-shadow: 0 4px 15px rgba(255, 206, 122, 0.1); }
-.dark-mode .radioCard h5                           { color: #f5c17b; }
-.dark-mode .radioCard p                            { color: #e0e0e0; }
-.dark-mode .radioCard .radioPrezzo                { color: #f5c17b; }
-.dark-mode .radioCard:has(input:checked)           { background-color: #4a3b1e; border-color: #ffc970; box-shadow: 0 0 0 2px rgba(255, 201, 112, 0.3); }
-
-.dark-mode #sendAppointment                        { background-color: #d6a861; color: #1e1e1e; }
-.dark-mode #sendAppointment:hover                  { background-color: #f5c17b; }
-
-.dark-mode #commentoUtente                         { background-color: #1e1e1e; color: #f1f1f1; }
-.dark-mode #commentoUtente h4                      { color: #f5c17b; }
-.dark-mode #commentoUtente input[type="text"],
-.dark-mode #commentoUtente textarea                { background-color: #2c2c2c; color: #fff; border: 2px solid #d6a861; }
-.dark-mode #commentoUtente button#sendComment      { background-color: #d6a861; color: #1e1e1e; }
-.dark-mode #commentoUtente button#sendComment:hover{ background-color: #f5c17b; }
-
-/* =======================
-   Media Queries
-======================= */
-@media (max-width: 768px) {
-  nav#headBar     { gap: 1rem; }
-  #scrollWrapper  { animation-duration: 20s; }   /* scroll più veloce su schermi piccoli */
+body.dark-mode #siteFooter {
+  background-color: #202020;
+  color: #dcdcdc;
+  border-top: 2px solid #a77f3d;
 }
 
-@media (max-width: 480px) {
-  #logo                  { height: 60px; }
-  header                 { padding: 1rem; }
-  #heroSection h2        { font-size: clamp(1.7rem, 8vw, 2.3rem); }
-  .cut                   { height: 150px; width: 150px; }
-  #scrollWrapper         { animation-duration: 15s; }
+body.dark-mode .footer-section h4 {
+  color: #d4ab68;
 }
+
+.dark-mode #appointmentSection {
+  background-color: #
