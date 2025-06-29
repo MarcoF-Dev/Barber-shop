@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,21 +12,18 @@ body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   background-color: #fefefe;
-  overflow-x: hidden; /* evita overflow orizzontale */
+  overflow-x: hidden
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* permette di andare a capo se serve */
   padding: 1.2rem 2rem;
   background-color: #f2efe6;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   margin-bottom: 1rem;
-  overflow-x: hidden; /* evita overflow orizzontale */
 }
-
 button {
   font-family: "Montserrat", sans-serif;
 }
@@ -668,4 +665,98 @@ body.dark-mode .footer-section h4 {
 }
 
 .dark-mode #appointmentSection {
-  background-color: #
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode #appointmentSection h4 {
+  color: #f5c17b;
+}
+
+/* Appointment Section */
+.dark-mode #appointmentSection input[type="text"],
+.dark-mode #appointmentSection input[type="date"] {
+  background-color: #2b2b2b;
+  color: #fff;
+  border: 2px solid #d6a861;
+}
+
+.dark-mode #radioContainer {
+  color: white;
+}
+
+.dark-mode .radioCard {
+  background-color: #2e2e2e;
+  border-color: #d6a861;
+}
+
+.dark-mode .radioCard:hover {
+  box-shadow: 0 4px 15px rgba(255, 206, 122, 0.1);
+}
+
+.dark-mode .radioCard h5 {
+  color: #f5c17b;
+}
+
+.dark-mode .radioCard p {
+  color: #e0e0e0;
+}
+
+.dark-mode .radioCard .radioPrezzo {
+  color: #f5c17b;
+}
+
+.dark-mode .radioCard:has(input:checked) {
+  background-color: #4a3b1e;
+  border-color: #ffc970;
+  box-shadow: 0 0 0 2px rgba(255, 201, 112, 0.3);
+}
+
+.dark-mode #sendAppointment {
+  background-color: #d6a861;
+  color: #1e1e1e;
+}
+
+.dark-mode #sendAppointment:hover {
+  background-color: #f5c17b;
+}
+
+.dark-mode #commentoUtente {
+  background-color: #1e1e1e;
+
+  color: #f1f1f1;
+}
+
+.dark-mode #commentoUtente h4 {
+  color: #f5c17b;
+}
+
+.dark-mode #commentoUtente input[type="text"],
+.dark-mode #commentoUtente textarea {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 2px solid #d6a861;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.dark-mode #commentoUtente input[type="color"] {
+  background-color: #2c2c2c;
+  border: 1px solid #d6a861;
+
+  cursor: pointer;
+}
+
+.dark-mode #commentoUtente button#sendComment {
+  background-color: #d6a861;
+  color: #1e1e1e;
+  border: none;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+.dark-mode #commentoUtente button#sendComment:hover {
+  background-color: #f5c17b;
+}
