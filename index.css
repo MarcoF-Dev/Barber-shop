@@ -11,8 +11,8 @@ html {
 body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  background-color: #fefefe;
-  overflow-x: hidden
+  background-color: red;
+  overflow-x: hidden;
 }
 
 header {
