@@ -907,7 +907,7 @@ body.dark-mode .footer-section h4 {
     position: relative;
   }
 
-  .commentBox p > .commentBox {
+  .commentBox p{
     padding-bottom: 2rem;
     font-size: 0.9rem;
   }
