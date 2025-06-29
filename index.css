@@ -11,7 +11,7 @@ html {
 body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  background-color: red;
+  background-color: #fefefe;
   overflow-x: hidden;
 }
 
@@ -762,109 +762,244 @@ body.dark-mode .footer-section h4 {
 }
 
 /* --- Responsive mobile (max 600px) --- */
+
+/* HEADER: nascondo/* --- Responsive mobile (max 600px) --- */
 @media (max-width: 600px) {
-  /* HEADER: nascondo nav, lascio solo logo e i due bottoni */
-  nav#headBar {
+  /* Nascondi tutte le sezioni di default */
+  main,
+  footer,
+  #appointmentSection {
     display: none;
   }
+
+  /* HEADER */
+  nav#headBar a:nth-child(-n + 3) {
+    display: none;
+  }
+
+  nav#headBar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
   header {
     justify-content: space-between;
     padding: 1rem;
   }
+
   #logo {
     height: 60px;
   }
+
   #contact,
   #darkToggle {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+    display: inline-block;
   }
 
-  /* I NOSTRI TAGLI: viewport 1 immagine, animazione adattata */
+  /* HERO */
+  #heroSection {
+    height: 400px;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #heroSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #heroSection #prenota {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* “I NOSTRI TAGLI” - carosello 1 immagine visibile */
   #imgViewport {
-    width: 200px; /* larghezza di 1 immagine */
+    width: 100%;
+    max-width: 432px; /* 200 + 200 + 16px gap */
+    margin: 0 auto;
+    overflow: hidden;
     border-width: 1px;
   }
+
   #scrollWrapper {
-    width: calc(12 * 200px + 11 * 1rem); /* resta uguale */
-    animation: scrollLeftMobile 30s linear infinite;
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: scrollLeftMobile 20s linear infinite;
   }
+
   @keyframes scrollLeftMobile {
     0% {
       transform: translateX(0);
     }
     100% {
-      /* scrolla la larghezza di 1 div + 1 gap */
-      transform: translateX(calc(-1 * (200px + 1rem)));
+      transform: translateX(calc(-1 * (2 * 200px + 1rem)));
+      /* Scorri esattamente 2 immagini e 1 gap */
     }
   }
+
   .cut {
     height: 150px;
     width: 200px;
     font-size: 1.5rem;
+    flex-shrink: 0;
   }
 
-  /* I NOSTRI SERVIZI: ridimensiona card */
+  /* SERVIZI */
   #cardContainer {
-    gap: 2rem 2rem;
+    gap: 2rem 1rem;
+    justify-content: center;
   }
+
   .card {
     width: 90%;
     max-width: 300px;
     height: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  /* COMMENTI: riduci dimensioni, input fisso in basso */
+  .card .cardTitle {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .card .cardButton {
+    margin: 1rem auto 0 auto;
+  }
+
+  .card .durataServizio {
+    margin-top: 0.5rem;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .card .prezzo {
+    top: 0;
+    left: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* COMMENTI */
   #commentContainer {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
   }
+
   .commentBox {
     width: 90%;
     max-width: 350px;
     height: auto;
+    position: relative;
   }
+
+  .commentBox p > .commentBox {
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
   #commentoUtente {
     width: 100%;
     max-width: none;
     position: fixed;
-    left: 0;
-    bottom: 0;
-    transform: translateY(0);
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%);
     border-radius: 0;
     padding: 1rem;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
-    opacity: 1 !important;
-    animation: none !important;
+    opacity: 0;
+    animation: none;
+    transition: all 0.4s ease-in-out;
     z-index: 9999;
   }
+
+  #commentoUtente.slide {
+    bottom: 0;
+    opacity: 1;
+  }
+
   #sendComment {
     width: 100%;
     font-size: 1rem;
   }
 
-  /* CHI SIAMO: ridimensiona testo e container */
+  /* FOOTER */
   #siteFooter {
     padding: 1rem;
   }
+
   #information h4 {
     font-size: 1.5rem;
   }
+
   #information p {
     font-size: 0.9rem;
   }
+
   #moreInfoContainer {
     flex-direction: column;
     gap: 1.5rem;
   }
+
   #moreInfoContainer #logoInfo {
     height: 100px;
   }
 
-  /* IMPEDISCO SCROLL ORIZZONTALE */
+  /* SEZIONE APPUNTAMENTI */
+  #appointmentSection {
+    width: 90%;
+    max-width: 650px;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
+  }
+
+  #appointmentSection #appointmentLogo {
+    height: 300px;
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 1rem auto 0 auto;
+    display: block;
+  }
+
+  #inputContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #radioContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .radioCard {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* BLOCCA SCROLL ORIZZONTALE */
   html,
   body {
     overflow-x: hidden;
+    width: 100%;
   }
 }
+/* --------- FINE MEDIA‑QUERY --------- */
