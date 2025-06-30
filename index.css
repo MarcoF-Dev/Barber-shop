@@ -790,13 +790,13 @@ body.dark-mode .footer-section h4 {
   }
 
   #logo {
-    height: 60px;
+    height: 100px;
   }
 
   #contact,
   #darkToggle {
     padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: inline-block;
   }
 
@@ -907,7 +907,7 @@ body.dark-mode .footer-section h4 {
     position: relative;
   }
 
-  .commentBox p > .commentBox {
+  .commentBox > p {
     padding-bottom: 2rem;
     font-size: 0.9rem;
   }
