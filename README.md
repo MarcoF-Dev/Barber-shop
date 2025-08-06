@@ -23,7 +23,7 @@ Realizzato con HTML, CSS e JavaScript, include:
 1. Clona la repository:
 
 ```bash
-git clone https://github.com/marco08557/Barber-shop.git
+git clone https://github.com/MarcoF-Dev/Barber-shop.git
 Apri il file index.html nel browser per visualizzare il sito.
 
 Tecnologie usate
@@ -35,7 +35,7 @@ JavaScript
 
 Link
 Sito live su GitHub Pages:
-https://marco08557.github.io/Barber-shop/
+https://MarcoF-Dev.github.io/Barber-shop/
 
 Autore
 Marco Favara
